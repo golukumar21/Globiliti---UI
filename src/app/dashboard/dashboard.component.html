@@ -1,0 +1,24 @@
+<div class="app-cont">
+  <div class="main-section">
+    <app-sidebar></app-sidebar>
+    <div class="dash-section">
+      <div class="dash-head">
+        <div class="logo">
+          <img src="../../assets/houde.jfif" alt="Houde" />
+        </div>
+        <div class="academy-details">
+          <h3>Shenzhen Houde Academy</h3>
+          <div class="tabs">
+            <ul>
+              <li *ngFor="let h of headerTabs" [class.active]="h.active"><a [routerLink]="h.routeTo"
+                >{{h.name}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="dash-body">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

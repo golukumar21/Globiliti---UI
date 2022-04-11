@@ -1,0 +1,99 @@
+@use "../../../styles.scss" as global;
+
+.impact-board {
+  padding-top: 45px;
+  .card-blocks {
+    padding: 0 15px;
+    .ip-head {
+      display: flex;
+      justify-content: space-between;
+      h6 {
+        font-family: "Manrope-Bold";
+        margin-top: 8px;
+      }
+      .settings {
+        display: flex;
+        width: 50px;
+        justify-content: space-around;
+        span {
+          color: global.$gray;
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+    .ip-body {
+      .card {
+        padding: 10px;
+        margin: 15px 0;
+        .title {
+          margin-bottom: 5px;
+        }
+        .user-img-small {
+          img {
+            width: 20px;
+          }
+        }
+        p.title {
+          font-family: 'Manrope-Bold';
+        }
+        .priority {
+          border: 1px solid #000000;
+          padding: 2px;
+          border-radius: 14px;
+          width: 65px;
+          text-align: center;
+          font-size: 12px;
+          margin: 10px 0 10px 0;
+          &.tool-pilot-status {
+            width: 150px;
+          }
+          &.high {
+            color: #ffffff;
+            background-color: #eb5757;
+            border-color: #eb5757;
+          }
+          &.medium {
+            color: #ffffff;
+            background-color: #fd612b;
+            border-color: #fd612b;
+          }
+          &.low {
+            color: #ffffff;
+            background-color: #1dbc8e;
+            border-color: #1dbc8e;
+          }
+        }
+        .det,
+        .user-det {
+          display: flex;
+          justify-content: space-between;
+        }
+        .tool-info {
+          display: flex;
+          p.title {
+            margin: 10px;
+            font-family: 'Manrope-Bold';
+          }
+          p.details {
+            margin: 10px;
+            font-size: 12px;
+            font-family: 'Manrope-Regular';
+          }
+          img {
+            width: 45px;
+          }
+        }
+      }
+      .learning-pod {
+        margin-top: 20px;
+      }
+    }
+  }
+  .subtitle {
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Manrope-Regular';
+    font-size: 13px;
+  }
+}

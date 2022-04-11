@@ -1,0 +1,98 @@
+<div class="container-fluid impact-board">
+  <div class="row">
+    <div class="col-3 col-lg-3 col-md-3 col-sm-12">
+      <div class="impact-campaigns card-blocks">
+        <div class="ip-head">
+          <h6>Impact Campaigns</h6>
+          <div class="settings">
+            <span class="plus">+</span>
+            <span class="ellipses">...</span>
+          </div>
+        </div>
+        <div class="ip-body">
+          <div class="card" *ngFor="let c of campaingsData">
+            <p class="title">{{ c.campaignName }}</p>
+            <div class="priority" [ngClass]="c.priority">High</div>
+            <div class="det">
+              <p>&#x2639; students</p>
+              <p>&#x2692; {{ c.tools }} tools</p>
+            </div>
+            <div class="user-det">
+              <div class="user-img-small">
+                <img src="assets/images/user.png" alt="" />
+              </div>
+              <div class="date-range">{{ c.date }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="subtitle">&#x2719; Start New Campaign</p>
+    </div>
+    <div class="col-3 col-lg-3 col-md-3 col-sm-12">
+      <div class="learining-tools card-blocks">
+        <div class="ip-head">
+          <h6>Learning Tools</h6>
+          <div class="settings">
+            <span class="plus">+</span>
+            <span class="ellipses">...</span>
+          </div>
+        </div>
+        <div class="ip-body">
+          <div class="card" *ngFor="let l of learningToolsData">
+            <div class="tool-info">
+              <img src="{{ l.asset }}" alt="" />
+              <div class="tool-details">
+                <p class="title">{{ l.toolName }}</p>
+                <p class="details">
+                  {{ l.details }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="subtitle">&#x2719; Add New tool</p>
+    </div>
+    <div class="col-3 col-lg-3 col-md-3 col-sm-12">
+      <div class="tool-pilots card-blocks">
+        <div class="ip-head">
+          <h6>Tool Pilots</h6>
+          <div class="settings">
+            <span class="plus">+</span>
+            <span class="ellipses">...</span>
+          </div>
+        </div>
+        <div class="ip-body">
+          <div class="card" *ngFor="let t of toolsPilotData">
+            <p class="title">{{t.toolPilotName}}</p>
+            <div class="priority tool-pilot-status" [ngClass]="t.priority">{{t.status}}</div>
+            <div class="det">
+              <p>&#x2622; {{t.date}}</p>
+              <!-- <p>&#x2692; {{ t.tools }} tools</p> -->
+            </div>
+            <div class="user-det">
+              <div class="user-img-small">
+                <img src="assets/images/user.png" alt="" />
+              </div>
+              <div class="price">&#xa5; {{ t.price }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-3 col-lg-3 col-md-3 col-sm-12">
+      <div class="tool-pilots card-blocks">
+        <div class="ip-head">
+          <h6>Design Learning Pods</h6>
+          <div class="settings">
+            <span class="plus">+</span>
+            <span class="ellipses">...</span>
+          </div>
+        </div>
+        <div class="ip-body">
+          <p class="subtitle learning-pod">&#x2719; New Learning Pod</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

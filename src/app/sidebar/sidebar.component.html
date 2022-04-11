@@ -1,0 +1,20 @@
+<div class="dash-sidebar">
+  <div class="logo">
+    <img src="assets/images/sidebar_logo.png" alt="" />
+  </div>
+  <div class="sidebar-menu">
+    <ul>
+      <li
+        *ngFor="let m of menuItems; let i = index"
+        [class.active]="selectedIndex === i"
+        [ngClass]="m.hasSeparator === true ? 'hasTopBorder' : ''"
+      >
+        <a [routerLink]="m.routeTo"
+          ><img [src]="m.icon" alt="" />{{ m.menuItem }}</a
+        >
+      </li>
+      <li><a>&#x2634; Settings</a></li>
+      <li (click)="logout()"><a>&#x26A9; Sign Out</a></li>
+    </ul>
+  </div>
+</div>
